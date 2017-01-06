@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_amaze">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/letsgo"
+            android:src="@drawable/letsgo"
+            android:adjustViewBounds="true"
+            android:maxWidth="300dp"
+            android:maxHeight="500dp"
+            android:scaleType="fitCenter"
+            android:layout_alignTop="@+id/levelSpinner"
+            android:layout_alignStart="@+id/MazeDriverTextView" />
+        <TextView
+            android:id="@+id/WelcomeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="37dp"
+            android:text="@string/welcome_to_the_maze"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+        <TextView
+            android:id="@+id/MazeGeneratorTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maze_generator"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_above="@+id/MazeGeneratorSpinner"
+            android:layout_centerHorizontal="true" />
+
+        <Spinner
+            android:id="@+id/MazeGeneratorSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/GeneratorSpinnerChoices"
+            android:spinnerMode="dropdown"
+            android:layout_centerVertical="true"
+            android:layout_alignStart="@+id/MazeGeneratorTextView"
+            android:layout_alignEnd="@+id/MazeGeneratorTextView" />
+
+        <TextView
+            android:id="@+id/MazeDriverTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/maze_driver"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_below="@+id/MazeGeneratorSpinner"
+            android:layout_centerHorizontal="true" />
+
+        <Spinner
+            android:id="@+id/MazeDriverSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/DriverSpinnerChoices"
+            android:spinnerMode="dropdown"
+            android:layout_below="@+id/MazeDriverTextView"
+            android:layout_alignEnd="@+id/MazeGeneratorSpinner"
+            android:layout_alignStart="@+id/MazeGeneratorSpinner" />
+
+        <Button
+            android:id="@+id/RivisitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/revisit"
+            android:onClick="revisitOnClick"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/MazeDriverSpinner"
+            android:layout_marginBottom="43dp" />
+
+        <Button
+            android:id="@+id/ExploreButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/RivisitButton"
+            android:layout_toEndOf="@+id/MazeDriverTextView"
+            android:text="@string/explore"
+            android:onClick="exploreOnClick" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/levelSpinner"
+            android:layout_above="@+id/MazeGeneratorTextView"
+            android:layout_alignEnd="@+id/MazeGeneratorTextView"
+            android:layout_alignStart="@+id/MazeGeneratorTextView"
+            android:entries="@array/LevelSpinnerChoices"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/skillLevel"
+            android:id="@+id/textView"
+            android:layout_above="@+id/levelSpinner"
+            android:layout_alignStart="@+id/MazeDriverTextView" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

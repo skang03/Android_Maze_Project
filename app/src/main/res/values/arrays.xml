@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="LevelSpinnerChoices">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+    <string-array name="GeneratorSpinnerChoices">
+        <item>Kruskal</item>
+        <item>Prim</item>
+        <item>DFS</item>
+    </string-array>
+
+    <string-array name="DriverSpinnerChoices">
+        <item>Manual</item>
+        <item>Wall Follower</item>
+    </string-array>
+
+</resources>

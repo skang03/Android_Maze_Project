@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/walls"
+            android:onClick="showWallsOnClick"
+            android:id="@+id/ShowWallsButton"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/ShowFullMazeButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/full_maze"
+            android:id="@+id/ShowFullMazeButton"
+            android:onClick="showFullMazeOnClick"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@+id/ShowSolutionButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/solution"
+            android:onClick="showSolutionOnClick"
+            android:id="@+id/ShowSolutionButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:id="@+id/button"
+            android:onClick="titleScreenOnClick"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/down"
+            android:adjustViewBounds="true"
+            android:maxWidth="80dp"
+            android:maxHeight="80dp"
+            android:scaleType="fitCenter"
+            android:onClick="downOnClick"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView5" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/left"
+            android:adjustViewBounds="true"
+            android:maxWidth="150dp"
+            android:maxHeight="150dp"
+            android:onClick="leftOnClick"
+            android:id="@+id/imageView2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right"
+            android:maxWidth="250dp"
+            android:maxHeight="250dp"
+            android:onClick="rightOnClick"
+            android:id="@+id/imageView3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/up"
+            android:adjustViewBounds="true"
+            android:maxWidth="80dp"
+            android:maxHeight="80dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageView"
+            android:onClick="upOnClick"
+            android:layout_above="@+id/imageView5"
+            android:layout_centerHorizontal="true"
+            />
+
+        <sungwonkang.cs301.cs.wm.edu.amazebysungwonkang.falstad.MazePanel
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/view"
+            android:layout_below="@+id/ShowWallsButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_above="@+id/imageView" />
+
+    </RelativeLayout>
+</LinearLayout>

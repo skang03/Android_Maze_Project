@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/walls"
+            android:onClick="showWallsPreviousOnClick"
+            android:id="@+id/ShowWallsButton"
+            android:layout_toStartOf="@+id/ShowFullMazeButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/full_maze"
+            android:id="@+id/ShowFullMazeButton"
+            android:layout_alignParentTop="true"
+            android:onClick="showFullMazePreviousOnClick"
+            android:layout_toStartOf="@+id/ShowSolutionButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/solution"
+            android:onClick="showSolutionPreviousOnClick"
+            android:id="@+id/ShowSolutionButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/imageView4" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:id="@+id/button"
+            android:onClick="titleScreenPreviousOnClick"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/imageView4" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/down"
+            android:adjustViewBounds="true"
+            android:maxWidth="80dp"
+            android:maxHeight="80dp"
+            android:scaleType="fitCenter"
+            android:onClick="downPreviousOnClick"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView5" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/left"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:maxHeight="100dp"
+            android:onClick="leftPreviousOnClick"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageView2"
+            android:layout_alignBottom="@+id/imageView5"
+            android:layout_alignStart="@+id/imageView4" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:maxHeight="100dp"
+            android:onClick="rightPreviousOnClick"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageView3"
+            android:layout_alignParentBottom="true"
+            android:layout_alignEnd="@+id/imageView4" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/maze_screenshot2"
+            android:adjustViewBounds="true"
+            android:maxWidth="350dp"
+            android:maxHeight="350dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageView4"
+            android:layout_below="@+id/ShowWallsButton"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/up"
+            android:adjustViewBounds="true"
+            android:maxWidth="80dp"
+            android:maxHeight="80dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageView"
+            android:onClick="upPreviousOnClick"
+            android:layout_below="@+id/imageView4"
+            android:layout_alignStart="@+id/imageView5" />
+
+
+    </RelativeLayout>
+</LinearLayout>

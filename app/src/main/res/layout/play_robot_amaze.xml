@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/walls"
+            android:id="@+id/ShowWallsButton"
+            android:onClick="showRobotWallsOnClick"
+            android:layout_toStartOf="@+id/ShowFullMazeButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/full_maze"
+            android:id="@+id/ShowFullMazeButton"
+            android:layout_alignParentTop="true"
+            android:onClick="showRobotFullMazeOnClick"
+            android:layout_toStartOf="@+id/ShowSolutionButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/solution"
+            android:onClick="showRobotSolutionOnClick"
+            android:id="@+id/ShowSolutionButton"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/imageView4" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:id="@+id/button"
+            android:onClick="titleScreenRobotOnClick"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/imageView4" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pause"
+            android:onClick="pauseRobotOnClick"
+            android:id="@+id/StartPauseRobotButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/down"
+            android:adjustViewBounds="true"
+            android:maxWidth="80dp"
+            android:maxHeight="80dp"
+            android:onClick="downRobotOnClick"
+            android:scaleType="fitCenter"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/left"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:maxHeight="100dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageView2"
+            android:onClick="leftRobotOnClick"
+            android:layout_alignParentBottom="true"
+            android:layout_toEndOf="@+id/button" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/right"
+            android:adjustViewBounds="true"
+            android:maxWidth="100dp"
+            android:maxHeight="100dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageView3"
+            android:onClick="rightRobotOnClick"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@+id/StartPauseRobotButton" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/maze_screenshot3"
+            android:adjustViewBounds="true"
+            android:maxWidth="350dp"
+            android:maxHeight="350dp"
+            android:scaleType="fitCenter"
+            android:id="@+id/imageView4"
+            android:layout_above="@+id/imageView"
+            android:layout_centerHorizontal="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/up"
+            android:layout_marginBottom="21dp"
+            android:adjustViewBounds="true"
+            android:maxWidth="80dp"
+            android:onClick="upRobotOnClick"
+            android:maxHeight="80dp"
+            android:scaleType="fitCenter"
+            android:layout_above="@+id/StartPauseRobotButton"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/imageView" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/finishscreen"
+            android:id="@+id/finishbutton"
+            android:onClick="finishRobotOnClick"
+            android:layout_above="@+id/imageView3"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>
